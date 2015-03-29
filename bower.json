@@ -1,0 +1,31 @@
+{
+  "name": "ui-bootstrap-dialogue",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Maidomax/ui-bootstrap-dialogue",
+  "authors": [
+    "Mladen Danic <maidomax@yahoo.com>"
+  ],
+  "description": "A confirmation/alert/prompt modal dialog service for ui-bootstrap. Similar to Bootbox, but doesn't depend on bootstrap.js",
+  "main": "dist/ui-bootstrap-dialogue.js",
+  "dependencies": {
+    "angular": ">=1 <1.3.0",
+    "angular-bootstrap": "~0.12.1"
+  },
+  "keywords": [
+    "ui-bootstrap",
+    "ui",
+    "angular",
+    "bootstrap",
+    "modal",
+    "dialog",
+    "bootbox"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
