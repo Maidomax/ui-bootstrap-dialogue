@@ -22,9 +22,13 @@ angular.module('ui.bootstrap.dialogue', [
                         };
 
                         $modalInstance.result.then(function(){
-                            callback(true);
+                            if (typeof callback === "function") {
+                                callback(true);
+                            }
                         }, function() {
-                            callback(false);
+                            if (typeof callback === "function") {
+                                callback(false);
+                            }
                         });
 
                     },
@@ -50,6 +54,36 @@ angular.module('ui.bootstrap.dialogue', [
                             }
                         });
 
+                    },
+                    controllerAs: 'ctrl',
+                    backdrop: true
+                });
+            },
+            prompt: function(message, callback){
+                $modal.open({
+                    template: '<div class="modal-header"><h3 class="modal-title" ng-bind="ctrl.message"></h3></div><div class="modal-body"><p class="form-group"><input type="text" class="form-control" ng-model="ctrl.inputValue"/></p></div><div class="modal-footer"><button class="btn btn-primary" ng-click="ctrl.respond(ctrl.inputValue)">Ok</button><button class="btn btn-warning" ng-click="ctrl.dismiss()">Cancel</button></div>',
+                    controller: function($modalInstance){
+                        var ctrl = this;
+
+                        ctrl.message = message;
+
+                        ctrl.respond = function(response){
+                            $modalInstance.close(response);
+                        };
+
+                        ctrl.dismiss = function(){
+                            $modalInstance.dismiss();
+                        };
+
+                        $modalInstance.result.then(function(response){
+                            if (typeof callback === "function") {
+                                callback(response);
+                            }
+                        }, function() {
+                            if (typeof callback === "function") {
+                                callback(false);
+                            }
+                        });
                     },
                     controllerAs: 'ctrl',
                     backdrop: true
