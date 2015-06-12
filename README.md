@@ -7,12 +7,13 @@ Add to your project with `bower install ui-bootstrap-dialogue --save`, or manual
 
 Usage
 -----
-Include `ui-bootstrap-dialogue.js` file, add `ui.bootstrap.dialogue` to your app's dependencies. You will now have a `$dialogue` service available in your app. Currently there are three methods available:
+Include `ui-bootstrap-dialogue.js` file, add `ui.bootstrap.dialogue` to your app's dependencies. You will now have a `$dialogue` service available in your app. Currently there are four methods available:
 - `$dialogue.alert(message, callback)`
 - `$dialogue.confirm(message, callback)`
 - `$dialogue.prompt(message, callback)`
+- `$dialogue.dialog(options)`
 
-which are self-explanatory, but you can check out the [Bootbox](http://bootboxjs.com/) documentation to see the behavior it mimics. Features will be added in the order they are displayed on [this Bootbox page](http://bootboxjs.com/examples.html), prompt with a default value is coming next.
+which are self-explanatory, but you can check out the [Bootbox](http://bootboxjs.com/) documentation to see the behavior it mimics. More features will be added soon, prompt with a default value is coming next.
 
 Contributing
 ------------
