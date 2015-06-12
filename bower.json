@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "homepage": "https://github.com/Maidomax/ui-bootstrap-dialogue",
   "authors": [
-    "Mladen Danic <maidomax@yahoo.com>"
+    "Mladen Danic <maidomax@yahoo.com>",
+    "Alexander Schwabe"
   ],
   "description": "A confirmation/alert/prompt modal dialog service for ui-bootstrap. Similar to Bootbox, but doesn't depend on bootstrap.js",
   "main": "dist/ui-bootstrap-dialogue.js",
@@ -26,6 +27,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    ".idea/",
+    "ui-bootstrap-dialogue.iml"
   ]
 }
